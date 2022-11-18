@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
+
 {% block title %} User page {% endblock %}
+
 {% block body %}
 <!-- Begin page content -->
 <main class="flex-shrink-0">
@@ -9,6 +11,7 @@
         <div class='message'>
             <h3>{{ message['title'] }}</h3>
             <p>{{ message['content'] }}</p>
+            <a href="{{ url_for('update', id = message.id)}}">ctualizar</a>
         </div>
     {% endfor %}
   </div>

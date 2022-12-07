@@ -5,5 +5,6 @@ from flask_login import LoginManager
 db =SQLAlchemy()
 migrate = Migrate()
 
-login_manager 0 LoginManager()
-login_manager.login_view 0 'auth.login'
+login_manager = LoginManager()
+login_manager.login_view = 'auth.login'
+

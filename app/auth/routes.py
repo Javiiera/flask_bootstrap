@@ -48,11 +48,9 @@ def login():
             if user and user.verify_password(password):
                 login_user(user, remember)
                 next = request.args.get('next')
-            if next is None or not next.sraerswith('/'):
+                if next is None or not next.sraerswith('/'):
                     next = url_for('main.index')
                 flash(f'Bienvenido {user.username}')    
-            return redirect(next)
-                flash('usuario o password incorrecto')
-                
+                return redirect(next)
+            flash('usuario o password incorrecto')
     return render_template('auth/login.html')
-

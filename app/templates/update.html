@@ -3,23 +3,34 @@
 {% block title %} User page {% endblock %}
 
 {% block body %}
-<h1> actualiza el mensaje</h1>
+<h1 class="text-center">Actualiza el Producto</h1>
 <form method="post">
-    <label for="title">Titulo</label>
+    <label for="títle" class="form-label">Nombre</label>
     <br>
     <input type="text" name="title" id="title"
-           placeholder="Titulo del mensaje"
-           value="{{ message.title }}"></input>
+           placeholder="Nombre del Producto "
+           value="{{ message.title }}" class="form-control"></input>
+    <label for="picture" class="form-label">Foto</label>
     <br>
-
-    <label for="content">contenido del mensaje</label>
-    <br>
+    <input type="text" name="picture" id="picture"
+           placeholder="Agrega tu Foto "
+           value="{{ message.picture }}" class="form-control"></input>     
+    <label for="content" class="form-label">Descripción del Producto</label>
     <textarea name="content" id="content"
-              placeholder="Contenido del mensaje"
+              placeholder="Descripción"
               rows="15"
               cols="60"
+              class="form-control"
               >{{ message.content }}</textarea>
-    <br>
-    <button type="submit">Submit</button>
+    <label for="price">Precio</label>  
+    <input type="text"
+           name="price" id="price" 
+           value="{{ message.price }}">
+
+
+    <label for="link">Link de Pago</label>  
+    <input type="text" name="link" id="link" value="{{ message.link }}">
+               
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-{% endblock %}
+{% endblock %}   

@@ -10,4 +10,5 @@ def index():
 
 @bp.app_errorhandler(404)
 def page_not_found(error):
-        return render_template('page_not_found.html'), 404
+    print(error)
+    return render_template('page_not_found.html'), 404

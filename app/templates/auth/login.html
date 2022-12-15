@@ -1,7 +1,5 @@
 {% extends "base.html" %}
-
 {% block title %}Flasky - Login{% endblock %}
-
 {% block body %}
 <div class="row">
     <div class="col-md-3 offset-md-4">
@@ -13,7 +11,7 @@
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Contraseña</label>
-                <input type="password" name="password" id="password" placeholder="Contraseña" value="{{ request.form['picture'] }}" class="form-control" required>        
+                <input type="password" name="password" id="password" placeholder="Contraseña" value="{{ request.form['picture'] }}" class="form-control" required>
             </div>
             <div class="mb-3">
                 <input type="checkbox" name="remember_me" id="remember_me" value="{{ request.form['remember_me'] }}">
@@ -25,4 +23,3 @@
     </div>
 </div>
 {% endblock %}
-
